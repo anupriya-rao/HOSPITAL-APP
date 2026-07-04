@@ -131,34 +131,49 @@ HOSPITAL-APP
 ├── package.json
 └── README.md
 ```
-```
 
 ---
-
 # 🔄 Application Flow
 
 ```text
-Patient ───► Creates Medical Profile
-                │
-                ▼
-          QR Code Generated
-                │
-                ▼
-Doctor ───► Scans QR Code
-                │
-                ▼
-     Accesses Medical History
-                │
-                ▼
- Adds Diagnosis & Prescription
-                │
-                ▼
- MongoDB Updates Patient Record
-                │
-                ▼
-Admin ───► Monitors Doctors,
-           Audit Logs & Analytics
-
+┌─────────┐
+│ Patient │
+└────┬────┘
+     │ Creates Medical Profile
+     ▼
+┌──────────────────┐
+│ Patient Profile  │
+│ + QR Generated   │
+└────┬─────────────┘
+     │
+     ▼
+┌─────────┐
+│ Doctor  │
+└────┬────┘
+     │ Scans QR Code
+     ▼
+┌──────────────────┐
+│ View Medical     │
+│ History & Alerts │
+└────┬─────────────┘
+     │
+     │ Adds Diagnosis,
+     │ Prescription & Notes
+     ▼
+┌──────────────────┐
+│ MongoDB Database │
+│ Updated Records  │
+└────┬─────────────┘
+     │
+     ▼
+┌─────────┐
+│  Admin  │
+└────┬────┘
+     │
+     ├── Doctor Verification
+     ├── Audit Logs
+     └── Hospital Analytics
+```
 ```
 # 🔐 Authentication
 
