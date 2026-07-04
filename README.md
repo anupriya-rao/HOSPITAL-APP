@@ -135,49 +135,30 @@ HOSPITAL-APP
 
 ---
 
-# 🗄️ Database Models
-
-## User
-
-* name
-* email
-* password (hashed)
-* role
-* linkedId
-* createdAt
-
-## Patient
-
-* name
-* age
-* gender
-* phone
-* bloodGroup
-* allergies
-* chronicConditions
-* highRisk
-* chronic
-* qrCode
-* emergencyContact
-* medicalHistory
-* createdAt
-
----
-# 🏛️ System Architecture
+# 🔄 Application Flow
 
 ```text
-Patient/Doctor/Admin
-          │
-          ▼
-      React Frontend
-          │
-      Axios API Calls
-          │
-          ▼
-   Node.js + Express Server
-          │
-          ▼
-       MongoDB Database
+Patient ───► Creates Medical Profile
+                │
+                ▼
+          QR Code Generated
+                │
+                ▼
+Doctor ───► Scans QR Code
+                │
+                ▼
+     Accesses Medical History
+                │
+                ▼
+ Adds Diagnosis & Prescription
+                │
+                ▼
+ MongoDB Updates Patient Record
+                │
+                ▼
+Admin ───► Monitors Doctors,
+           Audit Logs & Analytics
+
 ```
 # 🔐 Authentication
 
