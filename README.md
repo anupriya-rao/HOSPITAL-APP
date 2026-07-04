@@ -74,21 +74,64 @@ The Hospital Continuity App solves this problem by creating a **single digital m
 # 📂 Project Structure
 
 ```text
-hospital-app/
-├── client/
-└── server/
-    ├── models/
-    │   ├── User.js
-    │   └── Patient.js
-    ├── routes/
-    │   ├── auth.js
-    │   ├── patient.js
-    │   └── doctor.js
-    ├── middleware/
-    │   └── auth.js
-    ├── config/
-    ├── index.js
-    └── .env
+# 📂 Project Structure
+
+```text
+HOSPITAL-APP
+├── client
+│   ├── public
+│   │   ├── favicon.svg
+│   │   └── icons.svg
+│   ├── src
+│   │   ├── api
+│   │   │   └── axios.js
+│   │   ├── assets
+│   │   │   ├── hero.png
+│   │   │   ├── react.svg
+│   │   │   └── vite.svg
+│   │   ├── pages
+│   │   │   ├── admin
+│   │   │   │   ├── AdminDashboard.jsx
+│   │   │   │   ├── Analytics.jsx
+│   │   │   │   ├── AuditLog.jsx
+│   │   │   │   └── Doctors.jsx
+│   │   │   ├── doctor
+│   │   │   │   ├── AddVisit.jsx
+│   │   │   │   ├── DoctorDashboard.jsx
+│   │   │   │   └── PatientProfile.jsx
+│   │   │   ├── patient
+│   │   │   │   ├── PatientDashboard.jsx
+│   │   │   │   └── QRCode.jsx
+│   │   │   └── Login.jsx
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
+│
+├── server
+│   ├── config
+│   ├── middleware
+│   │   └── auth.js
+│   ├── models
+│   │   ├── User.js
+│   │   ├── Patient.js
+│   │   └── AuditLog.js
+│   ├── routes
+│   │   ├── auth.js
+│   │   ├── patient.js
+│   │   ├── doctor.js
+│   │   └── admin.js
+│   ├── .env
+│   ├── index.js
+│   ├── seed.js
+│   └── package.json
+│
+├── package.json
+└── README.md
+```
 ```
 
 ---
