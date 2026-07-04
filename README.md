@@ -173,7 +173,7 @@ HOSPITAL-APP
      ├── Doctor Verification
      ├── Audit Logs
      └── Hospital Analytics
-```
+
 ```
 # 🔐 Authentication
 
