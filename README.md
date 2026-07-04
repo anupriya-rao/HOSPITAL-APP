@@ -73,9 +73,8 @@ The Hospital Continuity App solves this problem by creating a **single digital m
 
 # 📂 Project Structure
 
-```text
-# 📂 Project Structure
 
+# 📂 Project Structure
 ```text
 HOSPITAL-APP
 ├── client
@@ -164,7 +163,22 @@ HOSPITAL-APP
 * createdAt
 
 ---
+# 🏛️ System Architecture
 
+```text
+Patient/Doctor/Admin
+          │
+          ▼
+      React Frontend
+          │
+      Axios API Calls
+          │
+          ▼
+   Node.js + Express Server
+          │
+          ▼
+       MongoDB Database
+```
 # 🔐 Authentication
 
 The application uses **JWT Authentication**.
@@ -348,9 +362,13 @@ http://127.0.0.1:8000
 cd client
 npm start
 ```
+# 🧪 Demo Credentials
+
+### Doctor
+Email: doc@test.com
+Password: pass123
 
 ---
-
 # 🎯 Future Scope
 
 * Multi-hospital integration
@@ -365,7 +383,7 @@ npm start
 
 # 👩‍💻 Developed By
 
-**Anupriya Rao**
+**Anupriya**
 B.Tech (Information Technology)
 Indira Gandhi Delhi Technical University for Women (IGDTUW)
 
